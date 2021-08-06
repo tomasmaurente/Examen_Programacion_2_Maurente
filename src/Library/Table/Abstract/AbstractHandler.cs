@@ -1,5 +1,9 @@
 using System.Collections.Generic;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica razon de cambio es que si se quisiece agregar un comando al juego como por ejemplo mover para atras. 
+*/
+
 namespace Library
 {
     public abstract class AbstractHandler

@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica resposabilidad es definir un StartHandler. 
+*/
+
 namespace Library
 {
     public class StartHandler : AbstractHandler, IStartHandler
