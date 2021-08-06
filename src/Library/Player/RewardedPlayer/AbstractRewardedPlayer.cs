@@ -25,7 +25,7 @@ namespace Library
                
                 if (playerReward == null)
                 {
-                    throw new NoAceptableReward();
+                    throw new NoAceptableRewardExeption();
                 }
                 else
                 {

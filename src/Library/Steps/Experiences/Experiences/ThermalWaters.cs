@@ -10,14 +10,18 @@ namespace Library
             this.reward = SetPointReward(pointReward);
         }
 
-        public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
+        public void Execute(int timesInStep, ref List<AbstractReward> rewards)
         {
             rewards.Add(reward);
         }
 
         public AbstractReward SetPointReward(int value)
         {
-            return new Point(value);
+            if (value > 0)
+            {
+                return new Point(value);
+            }
+            return new Point(0);
         }
     }
 }

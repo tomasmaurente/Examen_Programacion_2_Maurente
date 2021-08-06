@@ -10,14 +10,18 @@ namespace Library
             this.reward = SetCoinReward(coinReward);
         }
 
-        public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
+        public void Execute(int timesInStep, ref List<AbstractReward> rewards)
         {
             rewards.Add(reward);
         }
 
         public AbstractReward SetCoinReward(int value)
         {
-            return new Coin(value);
+            if (value > 0)
+            {
+                return new Coin(value);
+            }
+            return new Coin(0);
         }
     }
 }
