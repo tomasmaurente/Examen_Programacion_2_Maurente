@@ -11,6 +11,8 @@ using System.Linq;
     LSP: Esta clase cumple con LSP ya que en varias ocaciones es utilizada como parametro de tipo AbstractHandler.
     
     ISP: Esta clase cumple con ISP ya que todas la operaciones que define la interfaz son utilizadas por la clase.
+
+    DIP: Esta clase cumple con DIP ya que depende solamente de abstracciones. Sus dependencias son con AbstractPlayer e IStep.
 */
 
 namespace Library

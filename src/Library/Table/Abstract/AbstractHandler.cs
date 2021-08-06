@@ -9,6 +9,8 @@ using System.Collections.Generic;
     LSP: Esta clase cumple con LSP ya que en varias oaciones en el codigo se utiliza el tipo que define para englovar todos los subtipos que la suceden.
 
     ISP: No se aplica.
+
+    DIP: Esta clase cumple con DIP ya que depende solamente de abstracciones. Sus dependencias son con AbstractPlayer e IStep.
 */
 
 namespace Library
