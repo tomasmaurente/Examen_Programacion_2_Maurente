@@ -7,7 +7,7 @@ namespace Library
         // Player.
         private AbstractPlayer player;
         private IStep step;
-        IStepCounter stepCounter;
+        StepCounter stepCounter;
 
         [SetUp]
         public void Setup()

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class StepCounter : IStepCounter
+    public class StepCounter
     {
         private Dictionary<IStep, int> stepsCounter = new Dictionary<IStep, int>();
         public int GetStepInformation(IStep step)

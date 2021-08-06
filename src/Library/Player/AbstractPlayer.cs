@@ -2,27 +2,55 @@
 
 namespace Library
 {
-    public abstract class AbstractPlayer : AbstractRewardedPlayer
+    public abstract class AbstractPlayer : IRewardedPlayer, IStepCounter
     {
-        private IStepCounter stepCounter = new StepCounter();
+        public StepCounter StepCounter { get; }
+        public RewardedPlayer RewardedPlayer { get; }
         public string Name { get; private set; }
 
         public AbstractPlayer(string name)
         : base()
         {
             this.Name = name;
+            this.RewardedPlayer = new RewardedPlayer();
+            this.StepCounter = new StepCounter();
         }
 
         public void ExecuteStep(IStep step)
         {
             if (step != null)
             {
-                int timesInStep = this.stepCounter.GetStepInformation(step);
+                int timesInStep = this.GetStepInformation(step);
                 List<AbstractReward> rewards = new List<AbstractReward>();
                 step.Execute(timesInStep, ref rewards);
                 this.AddReward(rewards);
-                this.stepCounter.ReceiveStepConfirmation(step);
+                this.ReceiveStepConfirmation(step);
             }
+        }
+
+        public void AddReward(List<AbstractReward> incomingReward)
+        {
+            this.RewardedPlayer.AddReward(incomingReward);
+        }
+
+        public AbstractReward TotalPoints()
+        {
+            return this.RewardedPlayer.TotalPoints();
+        }
+
+        public AbstractReward TotalCoins()
+        {
+            return this.RewardedPlayer.TotalCoins();
+        }
+
+        public int GetStepInformation(IStep step)
+        {
+            return this.StepCounter.GetStepInformation(step);
+        }
+
+        public void ReceiveStepConfirmation(IStep step)
+        {
+            this.StepCounter.ReceiveStepConfirmation(step);
         }
     }
 }

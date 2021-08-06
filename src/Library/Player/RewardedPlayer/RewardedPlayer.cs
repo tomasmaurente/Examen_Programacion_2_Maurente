@@ -1,19 +1,22 @@
 using System.Collections.Generic;
 
+/*
+
+*/
 namespace Library
 {
-    public class AbstractRewardedPlayer
+    public class RewardedPlayer 
     {
         private List<AbstractReward> listRewards;
 
-        public AbstractRewardedPlayer()
+        public RewardedPlayer()
         {
             this.listRewards = new List<AbstractReward>();
             this.listRewards.Add(new Point(0));
             this.listRewards.Add(new Coin(0));
         }
 
-        protected void AddReward(List<AbstractReward> incomingReward)
+        public void AddReward(List<AbstractReward> incomingReward)
         {
             AbstractReward playerReward = null;
 
