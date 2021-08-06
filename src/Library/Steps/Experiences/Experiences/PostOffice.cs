@@ -4,11 +4,11 @@ namespace Library
 {
     public class PostOffice : ICoinExperience , IPointExperience
     {
-        private List<AbstractReward> reward;
+        private List<AbstractReward> reward = new List<AbstractReward>();
         public PostOffice(int coinReward, int pointReward)
         {
             this.reward.Add(SetCoinReward(coinReward));
-            this.reward.Add(SetPointReward(coinReward));
+            this.reward.Add(SetPointReward(pointReward));
         }
 
         public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
