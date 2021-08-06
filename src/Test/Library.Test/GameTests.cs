@@ -73,11 +73,10 @@ namespace Library
             this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
 
-
             this.startHandler.MovePlayer(this.player2, 1, false);
             this.startHandler.ExecuteStep(this.player2);
 
-            //Assert.True(this.handler)
+            Assert.True(this.startHandler.GetPodium()[0] == player2);
 
         }
     }

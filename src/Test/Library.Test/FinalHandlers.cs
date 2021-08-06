@@ -35,7 +35,7 @@ namespace Library
             {
                 this.handler.GetInTable(this.player4);
             }
-            catch(GameIsAlreadyStartedException)
+            catch (GameIsAlreadyStartedException)
             {
                 this.handler.MovePlayer(this.player2, 2, false);
                 this.handler.ExecuteStep(this.player2);
@@ -46,23 +46,23 @@ namespace Library
                 {
                     this.handler.MovePlayer(this.player1, -1, false);
                 }
-                catch(JustMoveFowardExeption)
+                catch (JustMoveFowardExeption)
                 {
                     try
                     {
                         this.handler.MovePlayer(this.player1, 65, false);
                     }
-                    catch(EndOfTheRoadException)
+                    catch (EndOfTheRoadException)
                     {
                         this.handler.ExecuteStep(this.player1);
                         this.handler.MovePlayer(this.player2, 4, false);
                         this.handler.ExecuteStep(this.player1);
-                        
+
                         this.handler.MovePlayer(this.player3, 3, false);
                         this.handler.ExecuteStep(this.player1);
                     }
                 }
-                
+
             }
             Assert.True(this.handler.GetPodium()[0] == player1 && this.handler.GetPodium()[1] == player3 && this.handler.GetPodium()[2] == player2);
 
