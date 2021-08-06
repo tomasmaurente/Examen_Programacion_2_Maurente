@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 
 /*
+    SRP: Esta clase cumple con SRP ya que su unica razon de cambio es que se introduzca un nuevo Reward al juego.
 
 */
+
 namespace Library
 {
     public class RewardedPlayer 

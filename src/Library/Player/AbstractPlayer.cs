@@ -1,5 +1,11 @@
 ﻿using System.Collections.Generic;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es componer AbstractPlayer, su unica razon de cambio es que se le quiera agregar 
+    una funcionalidad, ante este caso bastaría con seguir componiendo la clase.
+
+*/
+
 namespace Library
 {
     public abstract class AbstractPlayer : IRewardedPlayer, IStepCounter
@@ -15,7 +21,6 @@ namespace Library
             this.RewardedPlayer = new RewardedPlayer();
             this.StepCounter = new StepCounter();
         }
-
         public void ExecuteStep(IStep step)
         {
             if (step != null)
@@ -27,27 +32,22 @@ namespace Library
                 this.ReceiveStepConfirmation(step);
             }
         }
-
         public void AddReward(List<AbstractReward> incomingReward)
         {
             this.RewardedPlayer.AddReward(incomingReward);
         }
-
         public AbstractReward TotalPoints()
         {
             return this.RewardedPlayer.TotalPoints();
         }
-
         public AbstractReward TotalCoins()
         {
             return this.RewardedPlayer.TotalCoins();
         }
-
         public int GetStepInformation(IStep step)
         {
             return this.StepCounter.GetStepInformation(step);
         }
-
         public void ReceiveStepConfirmation(IStep step)
         {
             this.StepCounter.ReceiveStepConfirmation(step);

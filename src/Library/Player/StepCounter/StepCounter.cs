@@ -1,5 +1,10 @@
 using System.Collections.Generic;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica razon de cambio es que si se quiere llevar la cuenta de una manera distinta, esta clase deberá ser modificada.
+
+*/
+
 namespace Library
 {
     public class StepCounter
