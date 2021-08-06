@@ -18,6 +18,8 @@ using System.Collections.Generic;
     EXPERT: Esta clase es la experta en conocer el historial de lugares visitados del jugador.
 
     POLYMORPHISM: No se aplica.
+
+    CREATOR: No se aplica. 
 */
 
 namespace Library

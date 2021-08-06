@@ -22,6 +22,9 @@
     EXPERT: Esta clase es la experta en conocer el nombre del jugador.
 
     POLYMORPHISM: No se aplica.
+
+    CREATOR: Esta clase aplica el patron ya que crea a RewardedPLayer y StepCounter, esto es por la propia implementacion de la clase, la cual 
+    necesita de estas instancias. Es decir que esta clase agrega objetos de otra clase.
 */
 
 namespace Library
