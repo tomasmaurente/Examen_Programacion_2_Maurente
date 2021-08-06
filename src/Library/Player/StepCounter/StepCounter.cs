@@ -14,6 +14,8 @@ using System.Collections.Generic;
 
     DIP: Esta clase cumple con DIP ya que no depende de ninguna clase de bajo nivel. Ademas esta implementa IStepCounter para permitir que AbstractPlayer
     no dependa de StepCounter sino de la Interface IStepCounter.
+
+    EXPERT: Esta clase es la experta en conocer el historial de lugares visitados del jugador.
 */
 
 namespace Library

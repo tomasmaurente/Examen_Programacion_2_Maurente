@@ -13,6 +13,8 @@
 
     DIP: Esta interfaz cumple con DIP. Esta creada para que el objeto compuesto que requiera utilizar las operaciones que define esta interfaz, dependa
     de la interfaz y no del objeto que la implemente.
+
+    EXPERT: No se aplica.
 */
 
 namespace Library

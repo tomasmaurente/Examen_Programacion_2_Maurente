@@ -18,6 +18,8 @@
 
     DIP: esta clase cumple con DIP ya que solo depende de abstraciones. En el caso de RewardedPlayer esta clase depende de IRewardedPLayer y no de la 
     clase en si. Lo mismo sucede con StepCounter, los Rewards y Los Steps. 
+
+    EXPERT: Esta clase es la experta en conocer el nombre del jugador.
 */
 
 namespace Library

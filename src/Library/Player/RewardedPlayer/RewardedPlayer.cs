@@ -14,6 +14,8 @@ using System.Collections.Generic;
 
     DIP: Esta clase cumple con DIP ya que no depende de ninguna clase de bajo nivel. Ademas esta implementa IRewardedPlayer para permitir que 
     AbstractPlayer no dependa de RewardedPlayer sino de la Interface IRewardedPlayer.
+
+    EXPERT: Esta clase es la experta en conocer las recompensas del jugador.
 */
 
 namespace Library
