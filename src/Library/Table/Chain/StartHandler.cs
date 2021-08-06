@@ -2,7 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 
 /*
-    SRP: Esta clase cumple con SRP ya que su unica resposabilidad es definir un StartHandler. 
+    SRP: Esta clase no cumple con SRP ya que tiene dos responsabilidades, definir el handler, y definir un StartHandler. Se rompe con el principio debido 
+    a que no se puede resolver heredando, ni componiendo. Para situar una responsabilidad en una composicion (digamos IStartHandler) esta composicion 
+    necesitaría saber informacion del handler que haria que este rompiera con su encapsulacion, lo mismo sucede a la hora de heredar.
+    
+    OCP: Esta clase cumple con OCP ya que la clase es extendida y no modificada.
 */
 
 namespace Library

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 /*
     SRP: Esta clase cumple con SRP ya que su unica razon de cambio es que si se quisiece agregar un comando al juego como por ejemplo mover para atras. 
+    
+    OCP: Esta clase cumple con OCP ya que esta abierta a la extencion, StartHandler es un ejemplo.
 */
 
 namespace Library

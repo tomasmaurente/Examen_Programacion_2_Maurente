@@ -2,7 +2,8 @@
 
 /*
     SRP: Esta clase cumple con SRP ya que su unica responsabilidad es componer AbstractPlayer, su unica razon de cambio es que se le quiera agregar 
-    una funcionalidad, ante este caso bastaría con seguir componiendo la clase.
+    una funcionalidad, ante este caso bastaría con seguir componiendo la clase. Al componer la clase, las responsabilidades y las razones de cambio
+    pasan a ser de la clase componente, restandole responsabilidades y las razones de cambio a la clase compuesta, en este caso AbstractPlayer.
 
     OCP: Esta clase cumple con OCP. El caso de querer almacenar un nuevo tipo de informacion, se debe proceder como se hizo con RewardedPlayer. Se 
     debe crear una clase que pueda manejar esa informacion, e implementar una interfaz que permita el uso de esta segunda clase. De esta manera, 

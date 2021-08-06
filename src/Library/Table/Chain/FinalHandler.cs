@@ -1,6 +1,8 @@
 
 /*
     SRP: Esta clase cumple con SRP ya que su unica resposabilidad es definir un FinalHandler y sus metodos particulares.
+    
+    OCP: No se aplica.
 */
 
 namespace Library
