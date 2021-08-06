@@ -5,6 +5,8 @@
     OCP: No se aplica.
 
     LSP: Esta clase cumple con LSP ya que en repetidas ocaciones se lo almacena como AbstracPlayer.
+
+    ISP: No se aplica.
 */
 
 namespace Library

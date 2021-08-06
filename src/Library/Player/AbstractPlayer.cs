@@ -13,7 +13,8 @@
     definiera un nuevo tipo de player, como podria serlo un "traveler" solo se necesitaría definir la clase y que ella herede AbstractPlayer, con esto
     cualquier traveler no tendria problema alguno en el codigo.
 
-    
+    ISP: Esta clase cumple con ISP ya que separa dos responsabilidades en dos interfaces, IRewardedPlayer y IStepCounter. Si bien se utilizan ambas 
+    responsabilidades (por lo que podria ser una sola interfaz general) siguiendo SRP se separaron en dos interfaces distintas.
 */
 
 namespace Library

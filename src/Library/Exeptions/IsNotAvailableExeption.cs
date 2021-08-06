@@ -6,6 +6,8 @@ using System;
 
     LSP: Esta clase cumple LSP ya que al ser del tipo Exeption puede ser, por ejemplo, contenida en una lista que alvergue Objetos del tipo Exeption.
 
+    ISP: No se aplica.
+    
     DIP: No se aplica.
 */
 namespace Library

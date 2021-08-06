@@ -9,6 +9,8 @@ using System.Collections.Generic;
     obtener nuevas funcionalidades teniendo cambios minimos.
 
     LSP: No se aplica.
+
+    ISP: esta clase cumple ISP ya que define metodos que la clase compuesta usara en su totalidad.
 */
 
 namespace Library
