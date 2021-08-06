@@ -1,4 +1,8 @@
 using System.Collections.Generic;
+ 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es definir la experiencia PostOffice.
+*/
 
 namespace Library
 {
@@ -19,7 +23,7 @@ namespace Library
             }
         }
 
-        public AbstractReward SetCoinReward(int value)
+        public Coin SetCoinReward(int value)
         {
             if (value > 0)
             {
@@ -28,7 +32,7 @@ namespace Library
             return new Coin(0);
         }
 
-        public AbstractReward SetPointReward(int value)
+        public Point SetPointReward(int value)
         {
             if (value > 0)
             {

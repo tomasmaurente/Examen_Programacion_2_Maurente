@@ -1,5 +1,11 @@
 using System.Collections.Generic;
 
+ 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es definir la experiencia Farm.
+*/
+
+
 namespace Library
 {
     public class Farm : ICoinExperience
@@ -15,7 +21,7 @@ namespace Library
             rewards.Add(reward);
         }
 
-        public AbstractReward SetCoinReward(int value)
+        public Coin SetCoinReward(int value)
         {
             if (value > 0)
             {

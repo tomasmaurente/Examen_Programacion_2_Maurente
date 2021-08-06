@@ -1,5 +1,9 @@
 using System.Collections.Generic;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es definir el escenario Ocean.
+*/
+
 namespace Library
 {
     public class Ocean : IScenary
@@ -20,7 +24,7 @@ namespace Library
             return instance;
         }
 
-        public AbstractReward PointsOfVisit(int timesInStep)
+        public Point PointsOfVisit(int timesInStep)
         {
             int pointsToAdd = 1;
             for (int times = 1; times < timesInStep; times++)

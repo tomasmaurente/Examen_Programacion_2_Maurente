@@ -1,5 +1,9 @@
 using System.Collections.Generic;
 
+/*
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es definir la experiencia ThermalWaters.
+*/
+
 namespace Library
 {
     public class ThermalWaters : IPointExperience
@@ -15,7 +19,7 @@ namespace Library
             rewards.Add(reward);
         }
 
-        public AbstractReward SetPointReward(int value)
+        public Point SetPointReward(int value)
         {
             if (value > 0)
             {
