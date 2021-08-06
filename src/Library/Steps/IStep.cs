@@ -3,6 +3,7 @@ using System.Collections.Generic;
 /*
     SRP: Esta interfaz cumple con SRP ya que su unica responsabilidad es definir las operaciones necesarias que debe tener Step.
     
+    OCP: No se aplica.
 */
 
 namespace Library

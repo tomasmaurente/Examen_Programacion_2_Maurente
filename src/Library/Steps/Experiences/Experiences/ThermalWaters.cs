@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 /*
     SRP: Esta clase cumple con SRP ya que su unica responsabilidad es definir la experiencia ThermalWaters.
+    
+    OCP: No se aplica.
 */
 
 namespace Library
