@@ -5,9 +5,19 @@ namespace Library
     public class Mountain : IScenary
     {
         private AbstractReward reward;
+        private static Mountain instance;
 
-        public Mountain()
+        private Mountain()
         {
+        }
+
+        public static IStep GetMountain()
+        {
+            if (instance == null)
+            {
+                instance = new Mountain();
+            }
+            return instance;
         }
 
         public AbstractReward PointsOfVisit(int timesInStep)

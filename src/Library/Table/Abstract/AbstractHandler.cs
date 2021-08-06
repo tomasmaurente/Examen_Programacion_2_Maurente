@@ -5,7 +5,7 @@ namespace Library
     public abstract class AbstractHandler
     {
         protected AbstractHandler next;
-        protected List<AbstractPlayer> players;
+        protected List<AbstractPlayer> players = new List<AbstractPlayer>();
         protected IStep step;
         protected AbstractHandler(AbstractHandler next, IStep step)
         {
@@ -40,38 +40,35 @@ namespace Library
         }                
         public virtual void MovePlayer(AbstractPlayer player, int spotsToMove, bool playerAlreadyFound)
         {
-            if (this.players.Contains(player))
+            if(spotsToMove >= 0 )
             {
-                this.players.Remove(player);
-                this.next.MovePlayer(player, spotsToMove - 1, true);
-            }
-            else
-            {
-                if (playerAlreadyFound)
+                if (this.players.Contains(player))
                 {
-                    if (spotsToMove == 0)
-                    {
-                        this.ReceivePlayer(player);
-                    }
+                    this.players.Remove(player);
                     this.next.MovePlayer(player, spotsToMove - 1, true);
                 }
                 else
                 {
-                    this.next.MovePlayer(player, spotsToMove, false);
+                    if (playerAlreadyFound)
+                    {
+                        if (spotsToMove == 0)
+                        {
+                            this.ReceivePlayer(player);
+                            return;
+                        }
+                        this.next.MovePlayer(player, spotsToMove - 1, true);
+                    }
+                    else
+                    {
+                        this.next.MovePlayer(player, spotsToMove, false);
+                    }
                 }
-            }
-        } 
-        public virtual void RemovePlayerFromStep(AbstractPlayer player)
-        {
-            if (this.players.Contains(player))
-            {
-                this.players.Remove(player);
             }
             else
             {
-                this.next.RemovePlayerFromStep(player);
+                throw new JustMoveFowardExeption();
             }
-        }              
+        }            
         public virtual void ExecuteStep(AbstractPlayer player)
         {
             if (this.players.Contains(player))

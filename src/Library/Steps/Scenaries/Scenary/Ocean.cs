@@ -5,9 +5,19 @@ namespace Library
     public class Ocean : IScenary
     {
         private AbstractReward reward;
+        private static Ocean instance;
 
-        public Ocean()
+        private Ocean()
         {
+        }
+
+        public static Ocean GetOcean()
+        {
+            if(instance == null)
+            {
+                instance = new Ocean();
+            }
+            return instance;
         }
 
         public AbstractReward PointsOfVisit(int timesInStep)

@@ -32,10 +32,6 @@ namespace Library
                 this.ReceivePlayer(player);
             }
         }               
-        public override void RemovePlayerFromStep(AbstractPlayer player)
-        {
-            return;
-        }   
         public override void ExecuteStep(AbstractPlayer player)
         {
             return;
