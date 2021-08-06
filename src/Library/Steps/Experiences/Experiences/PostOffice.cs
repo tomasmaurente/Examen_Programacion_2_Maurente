@@ -14,6 +14,9 @@ using System.Collections.Generic;
     EXPERT: Esta clase es la experta en conocer la recompensa del Step.
 
     POLYMORPHISM: No se aplica.
+
+    CREATOR: Esta clase aplica el patron ya que crea Puntos, Monedas. Se justifica ya que se saben los valores que deben
+    tener los constructores de Coin y Point, siendo así una clase experta para crear instancias de otra. 
 */
 
 namespace Library
