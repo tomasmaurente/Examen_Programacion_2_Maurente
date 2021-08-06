@@ -52,14 +52,14 @@ namespace Library
         [Test]
         public void PlayerInMountain()
         {
-            this.step = new Mountain();
+            this.step = Mountain.GetMountain();
             player.ExecuteStep(step);
             Assert.AreEqual(1, player.TotalPoints().Value);
         }
         [Test]
         public void PlayerInMountains()
         {
-            this.step = new Mountain();
+            this.step = Mountain.GetMountain();
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             Assert.AreEqual(3, player.TotalPoints().Value);
@@ -67,14 +67,14 @@ namespace Library
         [Test]
         public void PlayerInOcean()
         {
-            this.step = new Ocean();
+            this.step = Ocean.GetOcean();
             player.ExecuteStep(step);
             Assert.AreEqual(1, player.TotalPoints().Value);
         }
         [Test]
         public void PlayerInOceans()
         {
-            this.step = new Ocean();
+            this.step = Ocean.GetOcean();
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             Assert.AreEqual(4, player.TotalPoints().Value);
@@ -127,7 +127,7 @@ namespace Library
             // Arrange.
             this.step = new ThermalWaters(-2);
             IStep step2 = new Farm(9);
-            IStep step3 = new Mountain();
+            IStep step3 = Mountain.GetMountain();
             // Act.
             stepCounter.GetStepInformation(step);
             stepCounter.GetStepInformation(step2);
@@ -149,7 +149,7 @@ namespace Library
         [Test]
         public void GetTotalPointsTest()
         {
-            this.step = new Ocean();
+            this.step = Ocean.GetOcean();
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
@@ -174,7 +174,7 @@ namespace Library
         [Test]
         public void GetTotalCoinsIfChargerPointsTest()
         {
-            this.step = new Ocean();
+            this.step = Ocean.GetOcean();
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
