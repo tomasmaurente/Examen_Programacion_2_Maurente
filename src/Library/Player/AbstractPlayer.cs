@@ -5,8 +5,8 @@ namespace Library
     public abstract class AbstractPlayer : AbstractRewardedPlayer
     {
         private IStepCounter stepCounter = new StepCounter();
-        public string Name{ get; private set; }
-        
+        public string Name { get; private set; }
+
         public AbstractPlayer(string name)
         : base()
         {
@@ -19,9 +19,9 @@ namespace Library
             {
                 int timesInStep = this.stepCounter.GetStepInformation(step);
                 List<AbstractReward> rewards = new List<AbstractReward>();
-                step.Execute(timesInStep ,ref rewards);
+                step.Execute(timesInStep, ref rewards);
                 this.AddReward(rewards);
-                this.stepCounter.ReceiveStepConfirmation(step);     
+                this.stepCounter.ReceiveStepConfirmation(step);
             }
         }
     }

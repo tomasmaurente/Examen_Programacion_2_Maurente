@@ -14,14 +14,14 @@ namespace Library
         // Handlers.
         private FinalHandler handler;
         private StartHandler startHandler;
-        
+
         [SetUp]
         public void Setup()
         {
             // Player.
-            this.player1 = new Player("Juan"); 
-            this.player2 = new Player("Pepo"); 
-            this.player3 = new Player("Ceci");  
+            this.player1 = new Player("Juan");
+            this.player2 = new Player("Pepo");
+            this.player3 = new Player("Ceci");
             // Handlers.
             this.handler = new FinalHandler();
             this.startHandler = new StartHandler();
@@ -44,44 +44,44 @@ namespace Library
         [Test]
         public void MovePlayerThrowsExeption()
         {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1,1,false));
+            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 1, false));
         }
         [Test]
         public void MovePlayerThrowsExeptionEvenWithCrazyNumber()
         {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1,65211,false));
+            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 65211, false));
         }
         [Test]
         public void MovePlayerThrowsExeptionEvenWithTrueArgument()
         {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1,65211,false));
+            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 65211, false));
         }
         [Test]
         public void GetPodiumRight()
         {
             this.startHandler.GetInTable(this.player1);
             this.startHandler.GetInTable(this.player2);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1,1,false);
+            this.startHandler.MovePlayer(this.player1, 1, false);
             this.startHandler.ExecuteStep(this.player1);
-            
-            
-            this.startHandler.MovePlayer(this.player2,1,false);
+
+
+            this.startHandler.MovePlayer(this.player2, 1, false);
             this.startHandler.ExecuteStep(this.player2);
 
             //Assert.True(this.handler)
-        
+
         }
     }
-} 
+}

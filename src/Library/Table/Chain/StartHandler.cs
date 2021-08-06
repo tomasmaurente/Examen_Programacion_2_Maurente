@@ -52,7 +52,7 @@ namespace Library
         }
         public override void MovePlayer(AbstractPlayer player, int spotsToMove, bool playerAlreadyFound)
         {
-            if(spotsToMove >= 0 )
+            if (spotsToMove >= 0)
             {
                 if (this.players.Contains(player))
                 {
@@ -81,7 +81,7 @@ namespace Library
             {
                 throw new JustMoveFowardExeption();
             }
-        } 
+        }
         public List<AbstractPlayer> GetPodium()
         {
             return this.listOfPlayers.OrderBy(p => p.TotalPoints().Value).ThenBy(p => p.TotalCoins().Value).ToList();

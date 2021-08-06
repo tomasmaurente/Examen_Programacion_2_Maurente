@@ -37,10 +37,10 @@ namespace Library
             {
                 return this.next.GetLastPlayer();
             }
-        }                
+        }
         public virtual void MovePlayer(AbstractPlayer player, int spotsToMove, bool playerAlreadyFound)
         {
-            if(spotsToMove >= 0 )
+            if (spotsToMove >= 0)
             {
                 if (this.players.Contains(player))
                 {
@@ -68,7 +68,7 @@ namespace Library
             {
                 throw new JustMoveFowardExeption();
             }
-        }            
+        }
         public virtual void ExecuteStep(AbstractPlayer player)
         {
             if (this.players.Contains(player))

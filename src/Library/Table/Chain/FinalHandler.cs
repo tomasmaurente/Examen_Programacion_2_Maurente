@@ -5,7 +5,7 @@ namespace Library
     public class FinalHandler : AbstractHandler
     {
         public FinalHandler()
-        : base(null,null)
+        : base(null, null)
         { }
 
         public override void ReceivePlayer(AbstractPlayer player)
@@ -19,7 +19,7 @@ namespace Library
         public override AbstractPlayer GetLastPlayer()
         {
             throw new AlreadyFinishedException();
-        }                
+        }
         public override void MovePlayer(AbstractPlayer player, int spotsToMove, bool playerAlreadyFound)
         {
             if (spotsToMove > 0)
@@ -31,7 +31,7 @@ namespace Library
             {
                 this.ReceivePlayer(player);
             }
-        }               
+        }
         public override void ExecuteStep(AbstractPlayer player)
         {
             return;

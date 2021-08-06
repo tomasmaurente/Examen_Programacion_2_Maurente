@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using NUnit.Framework;
 
 namespace Library
@@ -11,16 +8,16 @@ namespace Library
         private AbstractPlayer player;
         // Handler.
         private StartHandler handler;
-        
+
         [SetUp]
         public void Setup()
         {
             // Player.
-            this.player = new Player("Juan");  
+            this.player = new Player("Juan");
             // Handlers.
             this.handler = new StartHandler();
-        } 
-        
+        }
+
         [Test]
         public void GetInTableTest()
         {
@@ -38,7 +35,7 @@ namespace Library
         public void CantGetInTableBecauseSomeoneHasAlreadyMoved()
         {
             this.handler.GetInTable(this.player);
-            this.handler.MovePlayer(this.player,1,true);
+            this.handler.MovePlayer(this.player, 1, true);
             Assert.Throws<Library.GameIsAlreadyStartedException>(() => this.handler.GetInTable(new Player("Pepo")));
         }
         [Test]
@@ -82,7 +79,7 @@ namespace Library
         public void IsNotAvailableIfPlayerMove()
         {
             this.handler.GetInTable(this.player);
-            this.handler.MovePlayer(this.player,1,true);
+            this.handler.MovePlayer(this.player, 1, true);
             Assert.False(this.handler.IsAvailable());
         }
         [Test]
@@ -92,26 +89,26 @@ namespace Library
 
             this.handler.GetInTable(this.player);
             this.handler.GetInTable(player2);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            this.handler.MovePlayer(this.player,1,false);
+            this.handler.MovePlayer(this.player, 1, false);
             this.handler.ExecuteStep(this.player);
-            
-            
-            this.handler.MovePlayer(player2,1,false);
+
+
+            this.handler.MovePlayer(player2, 1, false);
             this.handler.ExecuteStep(player2);
 
             Assert.True(this.handler.GetPodium()[0] == player2);
         }
     }
-} 
+}

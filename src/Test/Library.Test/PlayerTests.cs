@@ -11,14 +11,14 @@ namespace Library
         private AbstractPlayer player;
         private IStep step;
         IStepCounter stepCounter;
-        
+
         [SetUp]
         public void Setup()
         {
             // Player.
-            this.player = new Player("Juan");  
+            this.player = new Player("Juan");
             this.stepCounter = new StepCounter();
-        }       
+        }
         [Test]
         public void PlayerInTermal()
         {
@@ -82,9 +82,9 @@ namespace Library
         [Test]
         public void PlayerInPostOffice()
         {
-            this.step = new PostOffice(1,1);
+            this.step = new PostOffice(1, 1);
             player.ExecuteStep(step);
-            Assert.True(1 ==  player.TotalPoints().Value && 1 == player.TotalCoins().Value);
+            Assert.True(1 == player.TotalPoints().Value && 1 == player.TotalCoins().Value);
         }
         [Test]
         public void ListOfRewardsWhitNegative()
@@ -104,13 +104,13 @@ namespace Library
         {
             this.step = new ThermalWaters(-2);
             stepCounter.ReceiveStepConfirmation(this.step);
-            Assert.AreEqual(stepCounter.GetStepInformation(this.step),1);
+            Assert.AreEqual(stepCounter.GetStepInformation(this.step), 1);
         }
         [Test]
         public void GetStepInformationWithOutPreviousConfirmationTest()
         {
             this.step = new ThermalWaters(-2);
-            Assert.AreEqual(stepCounter.GetStepInformation(this.step),1);
+            Assert.AreEqual(stepCounter.GetStepInformation(this.step), 1);
         }
         [Test]
         public void GetStepInformationWithPlentyPreviousConfirmationTest()
@@ -119,7 +119,7 @@ namespace Library
             stepCounter.ReceiveStepConfirmation(this.step);
             stepCounter.ReceiveStepConfirmation(this.step);
             stepCounter.ReceiveStepConfirmation(this.step);
-            Assert.AreEqual(stepCounter.GetStepInformation(this.step),3);
+            Assert.AreEqual(stepCounter.GetStepInformation(this.step), 3);
         }
         [Test]
         public void GetDiferentsStepsInformationTest()
@@ -144,7 +144,7 @@ namespace Library
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
-            Assert.AreEqual(0,player.TotalPoints().Value);
+            Assert.AreEqual(0, player.TotalPoints().Value);
         }
         [Test]
         public void GetTotalPointsTest()
@@ -154,12 +154,12 @@ namespace Library
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
-            Assert.AreEqual(16,player.TotalPoints().Value);
+            Assert.AreEqual(16, player.TotalPoints().Value);
         }
         [Test]
         public void GetTotalPointsWithNoPointsTest()
         {
-            Assert.AreEqual(0,player.TotalCoins().Value);
+            Assert.AreEqual(0, player.TotalCoins().Value);
         }
         [Test]
         public void GetTotalCoinsTest()
@@ -169,7 +169,7 @@ namespace Library
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
-            Assert.AreEqual(4,player.TotalCoins().Value);
+            Assert.AreEqual(4, player.TotalCoins().Value);
         }
         [Test]
         public void GetTotalCoinsIfChargerPointsTest()
@@ -179,12 +179,12 @@ namespace Library
             player.ExecuteStep(step);
             player.ExecuteStep(step);
             player.ExecuteStep(step);
-            Assert.AreEqual(0,player.TotalCoins().Value);
+            Assert.AreEqual(0, player.TotalCoins().Value);
         }
         [Test]
         public void GetTotalCoinsWithNoCoinsTest()
         {
-            Assert.AreEqual(0,player.TotalCoins().Value);
+            Assert.AreEqual(0, player.TotalCoins().Value);
         }
     }
 }

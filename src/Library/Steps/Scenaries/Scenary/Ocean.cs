@@ -13,7 +13,7 @@ namespace Library
 
         public static Ocean GetOcean()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new Ocean();
             }

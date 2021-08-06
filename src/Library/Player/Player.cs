@@ -7,6 +7,6 @@ namespace Library
         public Player(string name)
         : base(name)
         {
-        }      
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Library
 
         public AbstractRewardedPlayer()
         {
-            this.listRewards = new List<AbstractReward> ();
+            this.listRewards = new List<AbstractReward>();
             this.listRewards.Add(new Point(0));
             this.listRewards.Add(new Coin(0));
         }
@@ -19,10 +19,10 @@ namespace Library
         {
             AbstractReward playerReward = null;
 
-            foreach(AbstractReward reward in incomingReward)
-            { 
+            foreach (AbstractReward reward in incomingReward)
+            {
                 playerReward = listRewards.Find(x => x.GetType() == reward.GetType());
-               
+
                 if (playerReward == null)
                 {
                     throw new NoAceptableRewardExeption();
@@ -31,14 +31,14 @@ namespace Library
                 {
                     if (reward.Value > 0)
                     {
-                        playerReward.Value += reward.Value; 
+                        playerReward.Value += reward.Value;
                     }
                 }
             }
         }
         public AbstractReward TotalPoints()
         {
-            foreach(AbstractReward rewar in this.listRewards)
+            foreach (AbstractReward rewar in this.listRewards)
             {
                 if (rewar is Point)
                 {
@@ -49,7 +49,7 @@ namespace Library
         }
         public AbstractReward TotalCoins()
         {
-            foreach(AbstractReward rewar in this.listRewards)
+            foreach (AbstractReward rewar in this.listRewards)
             {
                 if (rewar is Coin)
                 {
