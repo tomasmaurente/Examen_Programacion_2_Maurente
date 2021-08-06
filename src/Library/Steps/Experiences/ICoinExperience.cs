@@ -7,6 +7,8 @@
     
     LSP: Esta interfaz cumple con LSP, aunque no se utilice en el codigo el tipo que define esta interfaz pdria ser utilizado para englovar todos los
     objetos subtipos que implementen esta interfaz.
+
+    ISP: No se aplica.
 */
 
 namespace Library

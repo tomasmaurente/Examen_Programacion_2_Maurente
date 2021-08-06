@@ -6,6 +6,8 @@ using System.Collections.Generic;
     OCP: No se aplica.
     
     LSP: Esta interfaz cumple con LSP ya que en repetidas ocaciones los objetos de esta clase estan en listas que contienen un supertipo.
+
+    ISP: No se aplica.
 */
 
 namespace Library

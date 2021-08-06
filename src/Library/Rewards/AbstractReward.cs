@@ -9,7 +9,7 @@
     Esto es util ya que si se quisiera añadir un nuevo reward, tal como "Bonus", se deberia crear una clase Bonus y heredar esta, e implementarla 
     en el step que fuese a devolver este reward.
 
-    
+    ISP: No se aplica.
 */
 
 namespace Library

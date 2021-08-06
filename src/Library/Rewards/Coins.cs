@@ -5,6 +5,8 @@
     OCP: No se aplica.
 
     LSP: Esta clase cumple con LSP ya que en varias ocaciones es contenido en listas bajo el tipo de AbstractReward.
+
+    ISP: No se aplica.
 */
 
 namespace Library
