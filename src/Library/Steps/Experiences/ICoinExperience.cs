@@ -13,6 +13,8 @@
     DIP: Esta clase cumple con DIP ya que no tiene dependencias.
     
     EXPERT: No se aplica.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

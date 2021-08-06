@@ -11,6 +11,8 @@
     DIP: Esta clase cumple con DIP ya que depende solamente de abstracciones. Sus dependencias son con AbstractPlayer e IStep.
     
     EXPERT: No se aplica.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

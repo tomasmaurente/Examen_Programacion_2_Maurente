@@ -16,6 +16,8 @@ using System.Collections.Generic;
     de la interfaz y no del objeto que la implemente.
 
     EXPERT: No se aplica.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

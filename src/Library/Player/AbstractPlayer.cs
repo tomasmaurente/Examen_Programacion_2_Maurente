@@ -20,6 +20,8 @@
     clase en si. Lo mismo sucede con StepCounter, los Rewards y Los Steps. 
 
     EXPERT: Esta clase es la experta en conocer el nombre del jugador.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

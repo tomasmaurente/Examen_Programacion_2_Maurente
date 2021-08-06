@@ -12,6 +12,8 @@ using System.Collections.Generic;
     DIP: Esta clase cumple con DIP ya que solo depende de AbstractReward, una abstración.
     
     EXPERT: Esta clase es la experta en conocer la recompensa del Step.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

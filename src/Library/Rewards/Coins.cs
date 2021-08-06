@@ -11,6 +11,8 @@
     DIP: No se aplica.
 
     EXPERT: Esta clase es la Expert en saber el precio de la moneda.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

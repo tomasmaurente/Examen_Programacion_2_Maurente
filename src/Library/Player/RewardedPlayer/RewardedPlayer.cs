@@ -16,6 +16,8 @@ using System.Collections.Generic;
     AbstractPlayer no dependa de RewardedPlayer sino de la Interface IRewardedPlayer.
 
     EXPERT: Esta clase es la experta en conocer las recompensas del jugador.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

@@ -11,7 +11,10 @@ using System;
     DIP: No se aplica.
 
     EXPERT: No se aplica.
+
+    POLYMORPHISM: No se aplica.
 */
+
 namespace Library
 {
     [Serializable]

@@ -13,6 +13,8 @@ using System.Collections.Generic;
     DIP: Esta interfaz cumple con DIP ya que no tiene dependencias.
     
     EXPERT: No se aplica.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library

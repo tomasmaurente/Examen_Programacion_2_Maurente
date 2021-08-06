@@ -16,6 +16,8 @@ using System.Collections.Generic;
     no dependa de StepCounter sino de la Interface IStepCounter.
 
     EXPERT: Esta clase es la experta en conocer el historial de lugares visitados del jugador.
+
+    POLYMORPHISM: No se aplica.
 */
 
 namespace Library
