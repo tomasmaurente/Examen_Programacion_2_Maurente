@@ -11,11 +11,14 @@ using System.Collections.Generic;
     LSP: No se aplica.
 
     ISP: esta clase cumple ISP ya que define metodos que la clase compuesta usara en su totalidad.
+
+    DIP: Esta clase cumple con DIP ya que no depende de ninguna clase de bajo nivel. Ademas esta implementa IRewardedPlayer para permitir que 
+    AbstractPlayer no dependa de RewardedPlayer sino de la Interface IRewardedPlayer.
 */
 
 namespace Library
 {
-    public class RewardedPlayer 
+    public class RewardedPlayer : IRewardedPlayer
     {
         private List<AbstractReward> listRewards;
 

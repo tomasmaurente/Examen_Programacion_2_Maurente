@@ -7,13 +7,18 @@
     interfaz solo debe agregar las operaciones dictadas, asi solo solo estamos extendiendo el codigo y no modificandolo.
     
     LSP: No se aplica.
+
+    ISP: Esta interfaz cumple con ISP ya que todas las operaciones que define esta interfaz son utilizadas en su totalidad por los objetos que la utilizan
+    o implementan.
+
+    DIP: Esta interfaz cumple con DIP. Esta creada para que el objeto compuesto que requiera utilizar las operaciones que define esta interfaz, dependa
+    de la interfaz y no del objeto que la implemente.
 */
 
 namespace Library
 {
     public interface IStepCounter
     {
-        StepCounter StepCounter { get; }
         public int GetStepInformation(IStep step);
         public void ReceiveStepConfirmation(IStep step);
     }

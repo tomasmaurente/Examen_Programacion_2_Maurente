@@ -11,11 +11,14 @@ using System.Collections.Generic;
     LSP: No se aplica.
 
     ISP: esta clase cumple ISP ya que define metodos que la clase compuesta usara en su totalidad.
+
+    DIP: Esta clase cumple con DIP ya que no depende de ninguna clase de bajo nivel. Ademas esta implementa IStepCounter para permitir que AbstractPlayer
+    no dependa de StepCounter sino de la Interface IStepCounter.
 */
 
 namespace Library
 {
-    public class StepCounter
+    public class StepCounter : IStepCounter
     {
         private Dictionary<IStep, int> stepsCounter = new Dictionary<IStep, int>();
         public int GetStepInformation(IStep step)

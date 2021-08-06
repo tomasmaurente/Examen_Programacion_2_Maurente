@@ -15,14 +15,17 @@
 
     ISP: Esta clase cumple con ISP ya que separa dos responsabilidades en dos interfaces, IRewardedPlayer y IStepCounter. Si bien se utilizan ambas 
     responsabilidades (por lo que podria ser una sola interfaz general) siguiendo SRP se separaron en dos interfaces distintas.
+
+    DIP: esta clase cumple con DIP ya que solo depende de abstraciones. En el caso de RewardedPlayer esta clase depende de IRewardedPLayer y no de la 
+    clase en si. Lo mismo sucede con StepCounter, los Rewards y Los Steps. 
 */
 
 namespace Library
 {
     public abstract class AbstractPlayer : IRewardedPlayer, IStepCounter
     {
-        public StepCounter StepCounter { get; }
-        public RewardedPlayer RewardedPlayer { get; }
+        public IStepCounter StepCounter { get; }
+        public IRewardedPlayer RewardedPlayer { get; }
         public string Name { get; private set; }
 
         public AbstractPlayer(string name)
