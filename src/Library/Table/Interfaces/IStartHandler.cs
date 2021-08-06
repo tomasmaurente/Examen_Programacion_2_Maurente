@@ -11,6 +11,8 @@ using System.Collections.Generic;
     ISP: Esta interfaz cumple con ISP ya que todas la operaciones que define son utilizadas por la clase que la implementa.
 
     DIP: Esta interfaz cumple con DIP ya que no tiene dependencias.
+    
+    EXPERT: No se aplica.
 */
 
 namespace Library
