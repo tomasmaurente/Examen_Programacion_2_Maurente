@@ -1,19 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using NUnit.Framework;
 
 namespace Library
 {
-    public class FinalHandlersTests
+    public class GameTests
     {
         // Player.
         private AbstractPlayer player1;
         private AbstractPlayer player2;
         private AbstractPlayer player3;
+        private AbstractPlayer player4;
         // Handlers.
-        private FinalHandler handler;
-        private StartHandler startHandler;
+        private StartHandler handler;
 
         [SetUp]
         public void Setup()
@@ -22,65 +19,52 @@ namespace Library
             this.player1 = new Player("Juan");
             this.player2 = new Player("Pepo");
             this.player3 = new Player("Ceci");
+            this.player4 = new Player("Alejandra");
             // Handlers.
-            this.handler = new FinalHandler();
-            this.startHandler = new StartHandler();
+            this.handler = new StartHandler();
         }
         [Test]
-        public void ReceivePlayer()
+        public void Party()
         {
-            this.handler.ReceivePlayer(this.player2);
-        }
-        [Test]
-        public void IsAlwaysAvailable()
-        {
-            Assert.True(this.handler.IsAvailable());
-        }
-        [Test]
-        public void GetLastPlayerThrowsExeption()
-        {
-            Assert.Throws<Library.AlreadyFinishedException>(() => this.handler.GetLastPlayer());
-        }
-        [Test]
-        public void MovePlayerThrowsExeption()
-        {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 1, false));
-        }
-        [Test]
-        public void MovePlayerThrowsExeptionEvenWithCrazyNumber()
-        {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 65211, false));
-        }
-        [Test]
-        public void MovePlayerThrowsExeptionEvenWithTrueArgument()
-        {
-            Assert.Throws<Library.EndOfTheRoadException>(() => this.handler.MovePlayer(this.player1, 65211, false));
-        }
-        [Test]
-        public void GetPodiumRight()
-        {
-            this.startHandler.GetInTable(this.player1);
-            this.startHandler.GetInTable(this.player2);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
-            this.startHandler.MovePlayer(this.player1, 1, false);
-            this.startHandler.ExecuteStep(this.player1);
+            this.handler.GetInTable(this.player1);
+            this.handler.GetInTable(this.player2);
+            this.handler.GetInTable(this.player3);
+            this.handler.MovePlayer(this.player1, 1, false);
+            this.handler.ExecuteStep(this.player1);
+            try
+            {
+                this.handler.GetInTable(this.player4);
+            }
+            catch(GameIsAlreadyStartedException)
+            {
+                this.handler.MovePlayer(this.player2, 2, false);
+                this.handler.ExecuteStep(this.player2);
 
-
-            this.startHandler.MovePlayer(this.player2, 1, false);
-            this.startHandler.ExecuteStep(this.player2);
-
-            //Assert.True(this.handler)
+                this.handler.MovePlayer(this.player3, 3, false);
+                this.handler.ExecuteStep(this.player3);
+                try
+                {
+                    this.handler.MovePlayer(this.player1, -1, false);
+                }
+                catch(JustMoveFowardExeption)
+                {
+                    try
+                    {
+                        this.handler.MovePlayer(this.player1, 65, false);
+                    }
+                    catch(EndOfTheRoadException)
+                    {
+                        this.handler.ExecuteStep(this.player1);
+                        this.handler.MovePlayer(this.player2, 4, false);
+                        this.handler.ExecuteStep(this.player1);
+                        
+                        this.handler.MovePlayer(this.player3, 3, false);
+                        this.handler.ExecuteStep(this.player1);
+                    }
+                }
+                
+            }
+            Assert.True(this.handler.GetPodium()[0] == player1 && this.handler.GetPodium()[1] == player3 && this.handler.GetPodium()[2] == player2);
 
         }
     }
