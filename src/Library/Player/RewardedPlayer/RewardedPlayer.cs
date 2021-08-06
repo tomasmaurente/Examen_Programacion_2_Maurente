@@ -7,6 +7,8 @@ using System.Collections.Generic;
     a la hora de implementarse en otra clase. A esta tipo de clases se la llama clase componente, debido a que exiten para componer a otras, estas clases 
     se crean para asumir una responsabilidad y restarle una razon de cambio a la clase compuesta. Asi se  logra tambien que la clase compuesta pueda 
     obtener nuevas funcionalidades teniendo cambios minimos.
+    
+    LSP: No se aplica.
 */
 
 namespace Library

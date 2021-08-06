@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
     OCP: Esta clase es ejemplo de como implementar una funcionalidad en AbstractPlayer haciendo cambios minimos en ella. AbstractPlayer al implementar esta
     interfaz solo debe agregar las operaciones dictadas, asi solo solo estamos extendiendo el codigo y no modificandolo.
+    
+    LSP: No se aplica.
 */
 
 namespace Library

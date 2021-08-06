@@ -9,7 +9,11 @@
     debe crear una clase que pueda manejar esa informacion, e implementar una interfaz que permita el uso de esta segunda clase. De esta manera, 
     podemos extender AbstractPlayer haciendo cambios minimos.
      
+    LSP: Esta clase cumple con LSP ya que en repetidas ocaciones es utilizado para crear listas de AbstractPlayers, esto genera que si el dia de mañana
+    definiera un nuevo tipo de player, como podria serlo un "traveler" solo se necesitaría definir la clase y que ella herede AbstractPlayer, con esto
+    cualquier traveler no tendria problema alguno en el codigo.
 
+    
 */
 
 namespace Library
