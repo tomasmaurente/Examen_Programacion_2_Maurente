@@ -9,6 +9,8 @@
     ISP: No se aplica.
 
     DIP: No se aplica.
+
+    EXPERT: Esta clase es la Expert en saber el valor del punto.
 */
 
 namespace Library

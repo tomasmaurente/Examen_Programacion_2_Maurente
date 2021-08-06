@@ -10,7 +10,10 @@ using System.Collections.Generic;
     ISP: No se aplica.
 
     DIP: Esta clase cumple con DIP ya que solo depende de AbstractReward, una abstración.
+    
+    EXPERT: Esta clase es la experta en conocer la recompensa del Step.
 */
+
 namespace Library
 {
     public class PostOffice : ICoinExperience, IPointExperience

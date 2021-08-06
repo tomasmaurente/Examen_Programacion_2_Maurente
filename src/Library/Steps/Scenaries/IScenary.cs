@@ -10,6 +10,8 @@
     ISP: No se aplica.
 
     DIP: Esta clase cumple con DIP ya que no tiene dependencias.
+    
+    EXPERT: No se aplica.
 */
 
 namespace Library
