@@ -8,6 +8,8 @@ using System.Collections.Generic;
     LSP: Esta interfaz cumple con LSP ya que en repetidas ocaciones los objetos de esta clase estan en listas que contienen un supertipo.
 
     ISP: No se aplica.
+
+    DIP: Esta clase cumple con DIP ya que solo depende de AbstractReward, una abstración.
 */
 
 namespace Library

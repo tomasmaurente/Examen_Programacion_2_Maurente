@@ -8,6 +8,8 @@ using System.Collections.Generic;
     LSP: Esta interfaz cumple con LSP ya que en varias oaciones en el codigo se utiliza el tipo que define para englovar todos los subtipos que la suceden.
 
     ISP: No se aplica.
+
+    DIP: Esta clase cumple con DIP ya que no tiene dependencias.
 */
 namespace Library
 {

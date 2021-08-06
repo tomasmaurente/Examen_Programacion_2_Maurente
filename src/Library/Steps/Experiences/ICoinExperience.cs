@@ -9,6 +9,8 @@
     objetos subtipos que implementen esta interfaz.
 
     ISP: No se aplica.
+
+    DIP: Esta clase cumple con DIP ya que no tiene dependencias.
 */
 
 namespace Library
