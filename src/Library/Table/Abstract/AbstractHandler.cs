@@ -3,7 +3,10 @@ using System.Collections.Generic;
 /*
     SRP: Esta clase cumple con SRP ya que su unica razon de cambio es que si se quisiece agregar un comando al juego como por ejemplo mover para atras. 
     
-    OCP: Esta clase cumple con OCP ya que esta abierta a la extencion, StartHandler es un ejemplo.
+    OCP: Esta clase cumple con OCP ya que esta abierta a la extencion, StartHandler es un ejemplo. Otro ejemplo es, si se quisiera implementar un nuevo 
+    handler, bastaría con crear una clase que defina el handler, heredar esta clase y agragarla a la cadena.
+
+    LSP: Esta clase cumple con LSP ya que en varias oaciones en el codigo se utiliza el tipo que define para englovar todos los subtipos que la suceden.
 */
 
 namespace Library

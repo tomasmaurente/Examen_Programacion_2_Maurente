@@ -7,6 +7,8 @@ using System.Linq;
     necesitaría saber informacion del handler que haria que este rompiera con su encapsulacion, lo mismo sucede a la hora de heredar.
     
     OCP: Esta clase cumple con OCP ya que la clase es extendida y no modificada.
+    
+    LSP: Esta clase cumple con LSP ya que en varias ocaciones es utilizada como parametro de tipo AbstractHandler.
 */
 
 namespace Library
