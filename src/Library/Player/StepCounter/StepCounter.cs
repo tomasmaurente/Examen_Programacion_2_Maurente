@@ -4,19 +4,34 @@ namespace Library
 {
     public class StepCounter : IStepCounter
     {
-        private Dictionary< IStep, int > stepsCounter = new Dictionary<IStep, int>();
+        private Dictionary<IStep, int> stepsCounter = new Dictionary<IStep, int>();
         public int GetStepInformation(IStep step)
         {
-            if (!(stepsCounter.ContainsKey(step)))
+            if (step != null)
             {
-                stepsCounter.Add(step,1);
+                if (!(stepsCounter.ContainsKey(step)))
+                {
+                    stepsCounter.Add(step, 1);
+                }
+                return stepsCounter[step];
             }
-            return stepsCounter[step];
+            return 0;
         }
 
         public void ReceiveStepConfirmation(IStep step)
         {
-            stepsCounter[step] += 1;
+            if (step != null)
+            {
+                if (!(stepsCounter.ContainsKey(step)))
+                {
+                    stepsCounter.Add(step, 1);
+                }
+                else
+                {
+                    stepsCounter[step] += 1;
+                }
+            }
+            return;
         }
     }
 }

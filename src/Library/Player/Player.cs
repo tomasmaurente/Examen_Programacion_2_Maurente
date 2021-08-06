@@ -4,8 +4,8 @@ namespace Library
 {
     public class Player : AbstractPlayer
     {
-        public Player(string name, Dictionary<AbstractReward,int> availableRewards)
-        : base(name, availableRewards)
+        public Player(string name)
+        : base(name)
         {
         }      
     }

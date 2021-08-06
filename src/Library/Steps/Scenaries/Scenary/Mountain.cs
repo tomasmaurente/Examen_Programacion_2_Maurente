@@ -12,12 +12,12 @@ namespace Library
 
         public AbstractReward PointsOfVisit(int timesInStep)
         {
-            int pointsToAdd = 0;
-            while (timesInStep != pointsToAdd)
+            int pointsToAdd = 1;
+            for (int times = 1; times < timesInStep; times++)
             {
                 pointsToAdd += 1;
             }
-            return new Coin(pointsToAdd);
+            return new Point(pointsToAdd);
         }
 
         public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
