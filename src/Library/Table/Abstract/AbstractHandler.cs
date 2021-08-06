@@ -7,6 +7,8 @@ using System.Collections.Generic;
     handler, bastaría con crear una clase que defina el handler, heredar esta clase y agragarla a la cadena.
 
     LSP: Esta clase cumple con LSP ya que en varias oaciones en el codigo se utiliza el tipo que define para englovar todos los subtipos que la suceden.
+
+    ISP: No se aplica.
 */
 
 namespace Library

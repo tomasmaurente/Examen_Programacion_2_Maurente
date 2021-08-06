@@ -9,6 +9,8 @@ using System.Linq;
     OCP: Esta clase cumple con OCP ya que la clase es extendida y no modificada.
     
     LSP: Esta clase cumple con LSP ya que en varias ocaciones es utilizada como parametro de tipo AbstractHandler.
+    
+    ISP: Esta clase cumple con ISP ya que todas la operaciones que define la interfaz son utilizadas por la clase.
 */
 
 namespace Library
