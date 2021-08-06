@@ -19,7 +19,7 @@ namespace Library
             {
                 int timesInStep = this.stepCounter.GetStepInformation(step);
                 List<AbstractReward> rewards = new List<AbstractReward>();
-                step.Execute(ref timesInStep ,ref rewards);
+                step.Execute(timesInStep ,ref rewards);
                 this.AddReward(rewards);
                 this.stepCounter.ReceiveStepConfirmation(step);     
             }

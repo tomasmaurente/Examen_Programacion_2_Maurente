@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class PostOffice : ICoinExperience , IPointExperience
+    public class PostOffice : ICoinExperience, IPointExperience
     {
         private List<AbstractReward> reward = new List<AbstractReward>();
         public PostOffice(int coinReward, int pointReward)
@@ -11,7 +11,7 @@ namespace Library
             this.reward.Add(SetPointReward(pointReward));
         }
 
-        public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
+        public void Execute(int timesInStep, ref List<AbstractReward> rewards)
         {
             foreach (AbstractReward internalReward in reward)
             {
@@ -21,12 +21,20 @@ namespace Library
 
         public AbstractReward SetCoinReward(int value)
         {
-            return new Coin(value);
+            if (value > 0)
+            {
+                return new Coin(value);
+            }
+            return new Coin(0);
         }
 
         public AbstractReward SetPointReward(int value)
         {
-            return new Point(value);
+            if (value > 0)
+            {
+                return new Point(value);
+            }
+            return new Point(0);
         }
     }
 }

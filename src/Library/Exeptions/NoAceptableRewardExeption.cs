@@ -2,7 +2,7 @@ using System;
 namespace Library
 {
     [Serializable]
-    public class NoAceptableReward : Exception
+    public class NoAceptableRewardExeption : Exception
     {
     }
 }

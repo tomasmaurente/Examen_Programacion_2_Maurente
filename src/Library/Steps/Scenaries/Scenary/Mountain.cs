@@ -20,7 +20,7 @@ namespace Library
             return new Point(pointsToAdd);
         }
 
-        public void Execute(ref int timesInStep, ref List<AbstractReward> rewards)
+        public void Execute(int timesInStep, ref List<AbstractReward> rewards)
         {
             this.reward = this.PointsOfVisit(timesInStep);
             rewards.Add(this.reward);
