@@ -85,5 +85,33 @@ namespace Library
             this.handler.MovePlayer(this.player,1,true);
             Assert.False(this.handler.IsAvailable());
         }
+        [Test]
+        public void GetPodiumRight()
+        {
+            AbstractPlayer player2 = new Player("Carlos");
+
+            this.handler.GetInTable(this.player);
+            this.handler.GetInTable(player2);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            this.handler.MovePlayer(this.player,1,false);
+            this.handler.ExecuteStep(this.player);
+            
+            
+            this.handler.MovePlayer(player2,1,false);
+            this.handler.ExecuteStep(player2);
+
+            Assert.True(this.handler.GetPodium()[0] == player2);
+        }
     }
 } 

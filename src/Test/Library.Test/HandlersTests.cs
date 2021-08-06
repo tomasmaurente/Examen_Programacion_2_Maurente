@@ -189,6 +189,7 @@ namespace Library
         public void ExecuteAllTripBothOfPlayers()
         {
             this.handler.GetInTable(this.player1);
+            this.handler.GetInTable(this.player2);
             this.handler.MovePlayer(this.player1,1,false);
             this.handler.ExecuteStep(this.player1);
             this.handler.MovePlayer(this.player1,1,false);
@@ -203,8 +204,23 @@ namespace Library
             this.handler.ExecuteStep(this.player1);
             this.handler.MovePlayer(this.player1,1,false);
             this.handler.ExecuteStep(this.player1);
-            Assert.AreEqual(this.player1.TotalCoins().Value, 7 );
-            Assert.AreEqual(this.player1.TotalPoints().Value, 10);
+            
+            
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            this.handler.MovePlayer(this.player2,1,false);
+            this.handler.ExecuteStep(this.player2);
+            Assert.True(this.player1.TotalCoins().Value == 7 && this.player1.TotalPoints().Value == 10);
         }
     }
 } 

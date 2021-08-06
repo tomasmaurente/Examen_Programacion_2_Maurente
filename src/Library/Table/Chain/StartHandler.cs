@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Library
 {
     public class StartHandler : AbstractHandler, IStartHandler
     {
-        private bool _canGetIn = true;
-        private List<AbstractPlayer> _listOfPlayers = new List<AbstractPlayer>();
+        private bool canGetIn = true;
+        private List<AbstractPlayer> listOfPlayers = new List<AbstractPlayer>();
         public StartHandler()
         : base(new FarmHandler(), null)
         { }
@@ -14,21 +15,21 @@ namespace Library
             if (this.IsAvailable())
             {
                 this.players.Add(player);
-                this._listOfPlayers.Add(player);
+                this.listOfPlayers.Add(player);
             }
             else
             {
-                this._canGetIn = false;
+                this.canGetIn = false;
                 throw new GameIsAlreadyStartedException();
             }
         }
         public List<AbstractPlayer> GetPlayers()
         {
-            return _listOfPlayers;
+            return listOfPlayers;
         }
         public override bool IsAvailable()
         {
-            if (_canGetIn)
+            if (canGetIn)
             {
                 if (this.players.Count < 5)
                 {
@@ -42,7 +43,7 @@ namespace Library
         {
             if (this.players.Contains(player))
             {
-                this._canGetIn = false;
+                this.canGetIn = false;
             }
             else
             {
@@ -57,7 +58,7 @@ namespace Library
                 {
                     this.players.Remove(player);
                     this.next.MovePlayer(player, spotsToMove - 1, true);
-                    this._canGetIn = false;
+                    this.canGetIn = false;
                 }
                 else
                 {
@@ -81,5 +82,9 @@ namespace Library
                 throw new JustMoveFowardExeption();
             }
         } 
+        public List<AbstractPlayer> GetPodium()
+        {
+            return this.listOfPlayers.OrderBy(p => p.TotalPoints().Value).ThenBy(p => p.TotalCoins().Value).ToList();
+        }
     }
 }
