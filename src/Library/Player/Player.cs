@@ -15,6 +15,8 @@
     POLYMORPHISM: No se aplica.
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: No se aplica.
 */
 
 namespace Library

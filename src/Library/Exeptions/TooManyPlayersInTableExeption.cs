@@ -17,6 +17,8 @@ using System;
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir un tipo de excepcion-
 */
 
 namespace Library

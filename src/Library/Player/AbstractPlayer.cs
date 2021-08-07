@@ -29,6 +29,8 @@
     LEY DE DEMETER: Esta clase cumple con el patron ya que las clases que la utilizan no interactuan con sus componentes ni saben que componentes contiene,
     es decir, no sabe su estructura interna. Esto es gracias a que los componentes estan instanciados y  los metodos que estos cotienen se los llama a 
     traves del objeto compuesto.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir los metodos necesarios para deinir un player.
 */
 
 namespace Library

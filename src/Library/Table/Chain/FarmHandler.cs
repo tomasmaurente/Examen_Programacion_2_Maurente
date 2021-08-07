@@ -18,6 +18,8 @@
     un nuevo Exeption, siendo así una clase experta para crear instancias de otra. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir un Handler.
 */
 
 namespace Library

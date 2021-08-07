@@ -20,6 +20,9 @@ using System.Collections.Generic;
     un nuevo Exeption, siendo así una clase experta para crear instancias de otra. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es BAJA ya que esta clase tiene muchas operaciones, mas es preferible mantener una cohesion baja y cumplir con
+    el encapsulamiento.
 */
 
 namespace Library

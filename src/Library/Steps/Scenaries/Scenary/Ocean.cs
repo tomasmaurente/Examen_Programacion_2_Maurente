@@ -19,6 +19,8 @@ using System.Collections.Generic;
     siendo así una clase experta para crear instancias de otra. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir un Step y que este sea ejecutable
 */
 
 namespace Library

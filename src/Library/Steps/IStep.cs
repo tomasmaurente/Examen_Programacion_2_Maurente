@@ -18,6 +18,8 @@ using System.Collections.Generic;
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir las operaciones que un Step debe tener.
 */
 
 namespace Library

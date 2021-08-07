@@ -23,6 +23,8 @@ using System.Collections.Generic;
     tener los constructores de Coin y Point y tambien sabe cuando debe arrojar la excepcion, siendo así una clase experta para crear instancias de otra. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para manejar rewards.
 */
 
 namespace Library

@@ -22,6 +22,8 @@ using System.Collections.Generic;
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para llevar un registro de los steps que el objeto compuesto visite.
 */
 
 namespace Library

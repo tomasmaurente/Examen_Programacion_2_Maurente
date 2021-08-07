@@ -20,6 +20,8 @@
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir los metodos necesarios para deinir un Reward.
 */
 
 namespace Library

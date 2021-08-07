@@ -19,6 +19,8 @@
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir las operaciones necesarias para que una experiencia otorgue Puntos.
 */
 
 namespace Library

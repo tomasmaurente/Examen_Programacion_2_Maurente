@@ -17,6 +17,8 @@
     CREATOR: No se aplica. 
 
     LEY DE DEMETER: No se aplica.
+
+    COHESION: no se aplica.
 */
 
 namespace Library
