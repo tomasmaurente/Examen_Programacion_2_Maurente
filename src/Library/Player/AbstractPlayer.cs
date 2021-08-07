@@ -25,6 +25,10 @@
 
     CREATOR: Esta clase aplica el patron ya que crea a RewardedPLayer y StepCounter, esto es por la propia implementacion de la clase, la cual 
     necesita de estas instancias. Es decir que esta clase agrega objetos de otra clase.
+
+    LEY DE DEMETER: Esta clase cumple con el patron ya que las clases que la utilizan no interactuan con sus componentes ni saben que componentes contiene,
+    es decir, no sabe su estructura interna. Esto es gracias a que los componentes estan instanciados y  los metodos que estos cotienen se los llama a 
+    traves del objeto compuesto.
 */
 
 namespace Library

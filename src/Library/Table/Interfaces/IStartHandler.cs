@@ -17,6 +17,8 @@ using System.Collections.Generic;
     POLYMORPHISM: No se aplica.
 
     CREATOR: No se aplica.
+
+    LEY DE DEMETER: No se aplica.
 */
 
 namespace Library

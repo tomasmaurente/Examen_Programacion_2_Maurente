@@ -17,6 +17,8 @@ using System.Collections.Generic;
 
     CREATOR: Esta clase aplica el patron ya que crea Monedas. Se justifica ya que se sabe el valor que debe tener el constructor de Coin,
     siendo así una clase experta para crear instancias de otra. 
+
+    LEY DE DEMETER: No se aplica.
 */
 
 namespace Library

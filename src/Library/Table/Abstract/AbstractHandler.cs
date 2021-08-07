@@ -18,6 +18,8 @@ using System.Collections.Generic;
 
     CREATOR: Esta clase aplica el patron ya que crea Exepciones. Se justifica ya que por la logica escrita por el codigo esta clase sabe cuando debe crear
     un nuevo Exeption, siendo así una clase experta para crear instancias de otra. 
+
+    LEY DE DEMETER: No se aplica.
 */
 
 namespace Library

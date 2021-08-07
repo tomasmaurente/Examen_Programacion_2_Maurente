@@ -21,6 +21,8 @@ using System.Collections.Generic;
 
     CREATOR: Esta clase aplica el patron ya que crea Puntos, Monedas, y nuevas excepciones. Se justifica ya que se saben los valores que deben
     tener los constructores de Coin y Point y tambien sabe cuando debe arrojar la excepcion, siendo así una clase experta para crear instancias de otra. 
+
+    LEY DE DEMETER: No se aplica.
 */
 
 namespace Library
