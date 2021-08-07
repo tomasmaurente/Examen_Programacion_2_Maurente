@@ -25,6 +25,10 @@
     ACOPLAMIENTO: No se aplica.
 */
 
+/// <summary>
+/// Esta interfaz se define para diferenciar las experiencias segun el valor que retornen.
+/// </summary>
+
 namespace Library
 {
     public interface IPointExperience : IStep

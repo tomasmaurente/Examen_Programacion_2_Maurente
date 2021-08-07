@@ -25,6 +25,10 @@ using System.Collections.Generic;
     ACOPLAMIENTO: No se aplica.
 */
 
+/// <summary>
+/// Esta interfaz se define para que el handler que la implemente pueda devolver el resultado del juego y tambien unir jugadores al tablero.
+/// </summary>
+
 namespace Library
 {
     public interface IStartHandler

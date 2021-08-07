@@ -25,6 +25,10 @@
     ACOPLAMIENTO: No se aplica.
 */
 
+/// <summary>
+/// Esta interfaz se define para definir los escenarios.
+/// </summary>
+
 namespace Library
 {
     public interface IScenary : IStep

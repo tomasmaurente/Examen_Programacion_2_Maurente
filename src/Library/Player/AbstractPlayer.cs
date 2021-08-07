@@ -35,6 +35,10 @@
     ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones.
 */
 
+/// <summary>
+/// La finalidad de esta clase es definir al player, aqui se definen todos los metodos necesarios para que un player circule por el codigo.
+/// </summary>
+
 namespace Library
 {
     public abstract class AbstractPlayer : IRewardedPlayer, IStepCounter
@@ -50,6 +54,8 @@ namespace Library
             this.RewardedPlayer = new RewardedPlayer();
             this.StepCounter = new StepCounter();
         }
+        // Este metodo ejecuta un step pasado por parametro, el player le pregunta al step la recompensa que le corresponde, luego el propio player
+        // gestiona como acumula la recompensa. 
         public void ExecuteStep(IStep step)
         {
             if (step != null)

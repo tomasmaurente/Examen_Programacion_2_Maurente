@@ -40,10 +40,12 @@ namespace Library
         {
             return true;
         }
+        // Este metodo se sobreescribe ya que no hay un paso siguiente.
         public override AbstractPlayer GetLastPlayer()
         {
             throw new AlreadyFinishedException();
         }
+        // Este metodo se sobreescribe ya que no hay un paso siguiente.
         public override void MovePlayer(AbstractPlayer player, int spotsToMove, bool playerAlreadyFound)
         {
             if (spotsToMove > 0)
@@ -56,6 +58,7 @@ namespace Library
                 this.ReceivePlayer(player);
             }
         }
+        // Este metodo se sobreescribe ya que no hay un paso siguiente ni un step para ejecutar.
         public override void ExecuteStep(AbstractPlayer player)
         {
             return;

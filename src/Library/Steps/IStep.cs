@@ -25,6 +25,10 @@ using System.Collections.Generic;
     objeto que implemente esta interfaz, tales como los steps.
 */
 
+/// <summary>
+/// Esta interfaz se define para definir un tipo generico que contenga a todos los steps.
+/// </summary>
+
 namespace Library
 {
     public interface IStep

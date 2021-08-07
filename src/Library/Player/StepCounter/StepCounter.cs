@@ -28,11 +28,18 @@ using System.Collections.Generic;
     ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones.
 */
 
+/// <summary>
+/// La finalidad de esta clase es componer al player,
+/// esta llevara la cuenta de los lugares que el player visite.
+/// </summary>
+
+
 namespace Library
 {
     public class StepCounter : IStepCounter
     {
         private Dictionary<IStep, int> stepsCounter = new Dictionary<IStep, int>();
+        // Este metodo devuelve la cantidad de veces que el jugador estubo en un determinado step. 
         public int GetStepInformation(IStep step)
         {
             if (step != null)
@@ -45,7 +52,7 @@ namespace Library
             }
             return 0;
         }
-
+        // Este metodo incrementa la cantidad de veces que un jugador estubo en un determinado step.
         public void ReceiveStepConfirmation(IStep step)
         {
             if (step != null)

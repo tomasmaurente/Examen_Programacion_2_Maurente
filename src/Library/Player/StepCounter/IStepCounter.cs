@@ -26,6 +26,10 @@
     que implemente esta interfaz.
 */
 
+/// <summary>
+/// Esta interfaz se crea para poder eliminar dependencias de AbstractPlayer.
+/// </summary>
+
 namespace Library
 {
     public interface IStepCounter

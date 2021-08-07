@@ -27,19 +27,25 @@ using System.Collections.Generic;
     ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones.
 */
 
+/// <summary>
+/// La finalidad de esta clase es componer al player,
+/// esta manejara los rewards que el player obtenga.
+/// </summary>
+
 namespace Library
 {
     public class RewardedPlayer : IRewardedPlayer
     {
         private List<AbstractReward> listRewards;
 
+        // Si se agrega otro reward se debe declarar en este constructor.
         public RewardedPlayer()
         {
             this.listRewards = new List<AbstractReward>();
             this.listRewards.Add(new Point(0));
             this.listRewards.Add(new Coin(0));
         }
-
+        // Este metodo checkea que los rewards que le fueron otorgados al player sean aceptables y luego los almacena.
         public void AddReward(List<AbstractReward> incomingReward)
         {
             AbstractReward playerReward = null;
@@ -61,6 +67,7 @@ namespace Library
                 }
             }
         }
+        // Este metodo devuelve la cantidad de puntos que el player tiene.
         public AbstractReward TotalPoints()
         {
             foreach (AbstractReward rewar in this.listRewards)
@@ -72,6 +79,7 @@ namespace Library
             }
             return null;
         }
+        // Este metodo devuelve la cantidad de monedas que el player tiene.
         public AbstractReward TotalCoins()
         {
             foreach (AbstractReward rewar in this.listRewards)
