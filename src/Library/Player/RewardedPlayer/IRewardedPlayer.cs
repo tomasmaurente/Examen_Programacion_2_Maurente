@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 
 /*
-    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es declarar las operacoines necesarias para que un objeto sea del tipo IStepCounter. 
-         Esta interfaz se debe implementar por todos aquellos abjetos que quieran llevar la cuenta de los Steps que visitan.
-    
+    SRP: Esta clase cumple con SRP ya que su unica responsabilidad es declarar las operacoines necesarias para que un objeto sea del tipo IRewardedPlayer. 
+            Esta interfaz se debe implementar por todos aquellos abjetos que quieran almacenar Rewards.
+
     OCP: Esta clase es ejemplo de como implementar una funcionalidad en AbstractPlayer haciendo cambios minimos en ella. AbstractPlayer al implementar esta
     interfaz solo debe agregar las operaciones dictadas, asi solo solo estamos extendiendo el codigo y no modificandolo.
     
@@ -22,6 +23,8 @@
 
     LEY DE DEMETER: No se aplica.
 
+    COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir las operaciones necesarias para implementar un objeto RewardedPlayer.
+
     ACOPLAMIENTO: Esta clase genera BAJO acoplamiento ya que hace que la dependencia de la clase compuesta pueda ser substituida por cualquier objeto
     que implemente esta interfaz.
 */
@@ -32,9 +35,10 @@
 
 namespace Library
 {
-    public interface IStepCounter
+    public interface IRewardedPlayer
     {
-        public int GetStepInformation(IStep step);
-        public void ReceiveStepConfirmation(IStep step);
+        public void AddReward(List<AbstractReward> incomingReward);
+        public AbstractReward TotalPoints();
+        public AbstractReward TotalCoins();
     }
 }
