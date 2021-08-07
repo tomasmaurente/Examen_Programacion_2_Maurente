@@ -24,6 +24,9 @@ using System.Collections.Generic;
     LEY DE DEMETER: No se aplica.
 
     COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir las operaciones necesarias para implementar un objeto RewardedPlayer.
+
+    ACOPLAMIENTO: Esta clase genera BAJO acoplamiento ya que hace que la dependencia de la clase compuesta pueda ser substituida por cualquier objeto
+    que implemente esta interfaz.
 */
 
 namespace Library

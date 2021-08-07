@@ -24,7 +24,7 @@ using System.Collections.Generic;
 
     LEY DE DEMETER: No se aplica.
 
-    COHESION: La cohesion de esta clase es ALTA ya que solo existe para manejar rewards.
+    ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones.
 */
 
 namespace Library

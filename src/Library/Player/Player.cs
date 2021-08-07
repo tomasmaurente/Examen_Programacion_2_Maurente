@@ -17,6 +17,8 @@
     LEY DE DEMETER: No se aplica.
 
     COHESION: No se aplica.
+
+    ACOPLAMIENTO: No se aplica.
 */
 
 namespace Library

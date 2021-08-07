@@ -20,6 +20,9 @@ using System.Collections.Generic;
     LEY DE DEMETER: No se aplica.
 
     COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir las operaciones que un Step debe tener.
+
+    ACOPLAMIENTO: Esta clase genera BAJO acoplamiento ya que hace que la dependencia de la clase que interactue pueda ser substituida por cualquier
+    objeto que implemente esta interfaz, tales como los steps.
 */
 
 namespace Library

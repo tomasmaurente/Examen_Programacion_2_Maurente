@@ -24,6 +24,8 @@ using System.Linq;
     LEY DE DEMETER: No se aplica.
 
     COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir un Handler.
+
+    ACOPLAMIENTO: No se aplica.
 */
 
 namespace Library

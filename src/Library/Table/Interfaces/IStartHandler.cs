@@ -21,6 +21,8 @@ using System.Collections.Generic;
     LEY DE DEMETER: No se aplica.
 
     COHESION: La cohesion de esta interfaz es ALTA ya que solo existe para definir las operaciones que debe implementar un handler iniciador de tablero.
+
+    ACOPLAMIENTO: No se aplica.
 */
 
 namespace Library

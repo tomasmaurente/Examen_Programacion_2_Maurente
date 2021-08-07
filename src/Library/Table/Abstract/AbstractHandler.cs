@@ -23,6 +23,10 @@ using System.Collections.Generic;
 
     COHESION: La cohesion de esta clase es BAJA ya que esta clase tiene muchas operaciones, mas es preferible mantener una cohesion baja y cumplir con
     el encapsulamiento.
+
+    ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones, y ademas genera BAJO acoplamiento ya que a la hora 
+    de querer incluir otro Step al tablero solo se debe crear un handler, heredar esta clase y sumarla a la cadena, haciend cambios minimos en el 
+    resto del codigo.
 */
 
 namespace Library

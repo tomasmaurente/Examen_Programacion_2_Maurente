@@ -31,6 +31,8 @@
     traves del objeto compuesto.
 
     COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir los metodos necesarios para deinir un player.
+
+    ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que hace solo depende de abstracciones.
 */
 
 namespace Library
