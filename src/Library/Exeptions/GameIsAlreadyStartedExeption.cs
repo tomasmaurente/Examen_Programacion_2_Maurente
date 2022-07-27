@@ -21,6 +21,7 @@ using System;
     COHESION: La cohesion de esta clase es ALTA ya que solo existe para definir un tipo de excepcion.
 
     ACOPLAMIENTO: Esta clase tiene BAJO acoplamiento ya que no depende de ninguna otra clase.
+
 */
 
 namespace Library
